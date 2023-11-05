@@ -6,14 +6,29 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('./backgrund_3.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para legibilidade do texto */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 header{
@@ -114,7 +129,7 @@ margin-top: 40px;
     right: 0;
     width: 45px;
     height: 45px;
-    background: #402927;
+    background: #352626;
     font-size: 2em;
     color: #fff;
     display: flex;
@@ -128,14 +143,14 @@ margin-top: 40px;
 .form-box-login h2{
     font-size: 2em;
     text-align: center;
-    color: #402927;
+    color: #352626;
 }
 
 .input-box{
     position: relative;
     width: 100%;
     height: 45px;
-    border-bottom: 2px solid #402927;
+    border-bottom: 2px solid #352626;
     margin: 30px 0;
 }
 
@@ -145,7 +160,7 @@ margin-top: 40px;
     left: 5px;
     transform: translateY(50%);
     font-size: 1em;
-    color: #402927;
+    color: #352626;
     font-weight: 600;
     pointer-events: none;
     transition: .5s;
@@ -165,7 +180,7 @@ margin-top: 40px;
     border: none;
     outline: none;
     font-size: 1em;
-    color: #402927;
+    color: #352626;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
@@ -174,28 +189,29 @@ margin-top: 40px;
    position: absolute;
    right: 8px;
    font-size: 1.2em;
-   color: #402927;
+   color: #352626;
    font-weight: 600;
    line-height: 57px;
 }
 
 .remember-fogot{
     font-size: .9em;
-    color: #402927;
-    font-weight: 500;
+    color:#fff;
+    font-weight: 200;
     margin: 15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
 
 .remember-fogot label input{
-    accent-color: #402927;
+    accent-color:#fff;
     margin-right: 5px;
 }
 
 .remember-fogot a {
-    color: #402927;
+    color: #fff;
     text-decoration: none;
+    font-weight: 200;
 }
 
 .remember-fogot a:hover{
@@ -205,7 +221,7 @@ margin-top: 40px;
 .btn{
     width: 100%;
     height: 45px;
-    background: #402927;
+    background: #352626;
     border: none;
     outline: none;
     border-radius: 6px;
@@ -217,16 +233,16 @@ margin-top: 40px;
 
 .login-register{
     font-size: .9em;
-    color: #402927;
+    color: #fff;
     text-align: center;
-    font-weight: 500;
+    font-weight: 300;
     margin: 25px 0 10px;
 }
 
 .login-register p a {
-    color: #402927;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 300;
 
 }
 
@@ -239,7 +255,7 @@ margin-top: 40px;
 .form-box-registrer h2{
     font-size: 2em;
     text-align: center;
-    color: #402927;
+    color:#352626;
 }
 
 
@@ -274,38 +290,25 @@ margin-top: 40px;
 }
 
 
-@media screen and (max-width: 375px) {
-    body {
-        background: url('./backgrund_3.jpeg') no-repeat;
-        background-size: auto; 
+    @media screen and (max-width: 375px) {
+        .wrapper {
+            width: 90%; /* Utilize 90% da largura da tela para o formulário */
+            max-width: 350px; /* Defina uma largura máxima para evitar que o formulário fique muito largo */
+        }
+    
+        .form-box-login, .form-box-registrer {
+            padding: 20px;
+        }
+    
+        .input-box {
+            margin: 15px 0; /* Reduza a margem entre os campos de entrada */
+        }
+    
+        .input-box input {
+            padding: 0 15px 0 5px;
+        }
+    
+        .btn {
+            font-size: 0.9em; /* Reduza o tamanho da fonte do botão */
+        }
     }
-
-    header {
-        padding: 10px; 
-    }
-
-    .navagation a {
-        font-size: 1rem; 
-    }
-
-    .navagation .btnlogin-poup {
-        margin-left: 20px; 
-    }
-
-    .wrapper {
-        width: 100%; 
-    }
-
-    .form-box-login, .form-box-registrer {
-        padding: 20px; 
-    }
-
-    .input-box input {
-        padding: 0 25px 0 5px; 
-    }
-}
-
-
-@media screen and (min-width: 768px) {
-
-}
