@@ -272,3 +272,40 @@ margin-top: 40px;
         border-radius: 10px;
         z-index: 2;
 }
+
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url('./backgrund_3.jpeg') no-repeat;
+        background-size: auto; 
+    }
+
+    header {
+        padding: 10px; 
+    }
+
+    .navagation a {
+        font-size: 1rem; 
+    }
+
+    .navagation .btnlogin-poup {
+        margin-left: 20px; 
+    }
+
+    .wrapper {
+        width: 100%; 
+    }
+
+    .form-box-login, .form-box-registrer {
+        padding: 20px; 
+    }
+
+    .input-box input {
+        padding: 0 25px 0 5px; 
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+}
